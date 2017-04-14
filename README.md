@@ -1,6 +1,10 @@
 # facebook-graph-feed
 A small Javascript and PHP component to display a Facebook page feed on a website.
 
+## Requirements
+
+Requires jQuery for now (will try and get rid of this dependency soon).
+
 ## Setup
 
 You need to have created a Facebook app to get an app ID and secret: https://developers.facebook.com/apps/ 
@@ -23,7 +27,7 @@ POST_LIMIT=12
 
 ## Usage
 
-Place in a folder on your website, and include on the page you want to use as so:
+Place all the contents of this project (including your new .env file) in a folder on your website, and include on the page you want to use as so:
 
 ```html
 
