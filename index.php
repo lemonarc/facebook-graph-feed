@@ -2,7 +2,13 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . '.serverconfig')) {
+    $dotenvconfig = new Dotenv\Dotenv(__DIR__, '.serverconfig');
+    $dotenvconfig->load();
+}
+
+$pathToDotEnv = getenv('PATH_TO_DOT_ENV') ?: $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '..';
+$dotenv = new Dotenv\Dotenv($pathToDotEnv);
 $dotenv->load();
 
 $app_id = getenv('APP_ID');
