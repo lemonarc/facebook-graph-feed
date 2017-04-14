@@ -37,7 +37,8 @@ Place all the contents of this project (including your new .env file) in a folde
           showMessage: false,
           messageMaxCharacters: 100,
           defaultImage: 'http://lorempixel.com/400/200',
-          showDate: false
+          showDate: false,
+          linkText: 'See more...'
         }
     </script>
     <script src="/facebook/index.js" type="text/javascript"></script>
@@ -53,4 +54,5 @@ Place all the contents of this project (including your new .env file) in a folde
 | messageMaxCharacters |               | The max characters to show of the message (message will be truncated) |
 | defaultImage         |               | Image to display when there is no image field |
 | showDate             | false         | Whether or not to show the date |
+| linkText             |               | Link text (overwrites the name of the post) |
 

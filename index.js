@@ -26,7 +26,8 @@ $(function() {
           post.append("<div class='message'>" + message + "</div>");
         }
 
-        if (this.link) post.append("<span class='socialmedialink'><a href=" + this.link + " target='_blank'>" + (this.name ? this.name : "Read more") + "</a></span>");
+        var linkText = facebookFeedConfig.linkText || this.name || "Read more";
+        if (this.link) post.append("<span class='socialmedialink'><a href=" + this.link + " target='_blank'>" + linkText + "</a></span>");
 
         if (facebookFeedConfig.showDate) {
           var createdTime = new Date(this.created_time);
