@@ -1,4 +1,0 @@
-# Supply a direct path (optional):
-PATH_TO_DOT_ENV=/path/to/.env
-
-If you don't supply a direct path to your .env file, this script will look in the folder above your document root
