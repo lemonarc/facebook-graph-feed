@@ -9,7 +9,7 @@ Requires jQuery for now (will try and get rid of this dependency soon).
 
 You need to have created a Facebook app to get an app ID and secret: https://developers.facebook.com/apps/ 
 
-Copy .env.example to a file called .env in the same folder and update your environment variables as required:
+Copy .env.example to a file called .env and update your environment variables as required:
 
 ```
 # Your app ID from your facebook app
@@ -25,9 +25,11 @@ PAGE_NAME=MyFacebookPage
 POST_LIMIT=12
 ```
 
+Place this .env file one folder above your document root, the PHP script will look for it there (you don't want people to be able to navigate to this file in their browser and see your app secret!).
+
 ## Usage
 
-Place all the contents of this project (including your new .env file) in a folder on your website, and include on the page you want to use as so:
+Place all the contents of this project apart from your .env file in a folder on your website, and include on the page you want to use as so:
 
 ```html
 
